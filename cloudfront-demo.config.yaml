@@ -1,0 +1,11 @@
+components:
+  cloudfront:
+    config:
+      origins:
+        api:
+          source: apigateway
+          protocol_policy: https-only
+
+      behaviours:
+        default:
+          TargetOriginId: api
